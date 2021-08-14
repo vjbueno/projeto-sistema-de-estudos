@@ -124,6 +124,9 @@ Private Sub Txt_revisão_Change()
 End Sub
 
 Private Sub UserForm_Activate()
+
+    Application.ScreenUpdating = False
+    
     Txt_índice.Value = Sheets("Configurações").Cells(2, 1).Value * 100
     Txt_revisão.Value = Sheets("Configurações").Cells(2, 2).Value
     Lb_voltar.Visible = False
@@ -131,7 +134,7 @@ Private Sub UserForm_Activate()
     btn_save.BackColor = &H808080
     
     
-
+    Application.ScreenUpdating = True
 
 End Sub
 
